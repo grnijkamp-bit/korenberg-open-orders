@@ -39,12 +39,31 @@
     .gate-card button{width:100%;border:0;border-radius:8px;background:var(--green);color:white;font-weight:800;padding:12px}
     .gate-error{min-height:18px;color:#a43123;font-size:13px;margin-top:8px}
     @media (max-width:420px){.summary{grid-template-columns:repeat(3,1fr)}.line-two{display:block}.line-two span{display:inline}.line-two span+span:before{content:" · "}.icon-action{width:34px;height:34px}}
+    .mobile-planning{background:white;border:1px solid var(--line);border-radius:8px;padding:10px;box-shadow:0 1px 3px rgba(0,0,0,.05);overflow:auto}
+    .mobile-planning h2{margin:0;font-size:18px}
+    .mobile-planning p{margin:2px 0 10px;color:var(--muted);font-size:12px}
+    .planning-week{min-width:720px;margin-top:10px}
+    .planning-week:first-of-type{margin-top:0}
+    .planning-week-title{font-weight:900;color:var(--brown);margin-bottom:4px}
+    .planning-grid{display:grid;grid-template-columns:64px repeat(6,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+    .planning-corner,.planning-day,.planning-slot,.planning-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px}
+    .planning-corner,.planning-day{background:#fffdf8;text-align:center}
+    .planning-day strong,.planning-day span{display:block}
+    .planning-day strong{font-size:12px}
+    .planning-day span{font-size:11px;color:var(--muted)}
+    .planning-slot{display:grid;place-items:center;background:var(--brown);color:white;font-size:11px;font-weight:900;text-align:center}
+    .planning-cell{min-height:44px;background:#fffdf8;font-size:11px}
+    .planning-cell.filled{background:#e9f5ee}
+    .planning-item{display:grid;gap:1px}
+    .planning-item + .planning-item{margin-top:5px;padding-top:5px;border-top:1px solid #c8dccf}
+    .planning-item strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .planning-item span,.free{color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 3-8-2026, 15:26:59</div>
+    <div class="meta">Aangemaakt: 3-8-2026, 17:57:39</div>
   </header>
   <main>
     <section class="summary">
@@ -755,6 +774,501 @@
         </div>
       </article>
     
+    
+    <section class="mobile-planning">
+      <h2>Planning</h2>
+      <p>4 weken vanaf 03-08-2026</p>
+      
+          <div class="planning-week">
+            <div class="planning-week-title">Week 32</div>
+            <div class="planning-grid">
+              <div class="planning-corner"></div>
+              <div class="planning-day"><strong>Ma</strong><span>03-08</span></div><div class="planning-day"><strong>Di</strong><span>04-08</span></div><div class="planning-day"><strong>Wo</strong><span>05-08</span></div><div class="planning-day"><strong>Do</strong><span>06-08</span></div><div class="planning-day"><strong>Vr</strong><span>07-08</span></div><div class="planning-day"><strong>Za</strong><span>08-08</span></div>
+              
+                <div class="planning-slot">10-12</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">13-15</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">15-17</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">Afwijkend</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item">
+                          <strong>A v Tongeren</strong>
+                          <span>04-08</span>
+                        </div>
+                      
+                    </div>
+                  
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item">
+                          <strong>J.Krijgsman</strong>
+                          <span>11-13</span>
+                        </div>
+                      
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item">
+                          <strong>W. Agterhuis</strong>
+                          <span>07-08</span>
+                        </div>
+                      
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+            </div>
+          </div>
+        
+          <div class="planning-week">
+            <div class="planning-week-title">Week 33</div>
+            <div class="planning-grid">
+              <div class="planning-corner"></div>
+              <div class="planning-day"><strong>Ma</strong><span>10-08</span></div><div class="planning-day"><strong>Di</strong><span>11-08</span></div><div class="planning-day"><strong>Wo</strong><span>12-08</span></div><div class="planning-day"><strong>Do</strong><span>13-08</span></div><div class="planning-day"><strong>Vr</strong><span>14-08</span></div><div class="planning-day"><strong>Za</strong><span>15-08</span></div>
+              
+                <div class="planning-slot">10-12</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">13-15</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">15-17</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">Afwijkend</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+            </div>
+          </div>
+        
+          <div class="planning-week">
+            <div class="planning-week-title">Week 34</div>
+            <div class="planning-grid">
+              <div class="planning-corner"></div>
+              <div class="planning-day"><strong>Ma</strong><span>17-08</span></div><div class="planning-day"><strong>Di</strong><span>18-08</span></div><div class="planning-day"><strong>Wo</strong><span>19-08</span></div><div class="planning-day"><strong>Do</strong><span>20-08</span></div><div class="planning-day"><strong>Vr</strong><span>21-08</span></div><div class="planning-day"><strong>Za</strong><span>22-08</span></div>
+              
+                <div class="planning-slot">10-12</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">13-15</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">15-17</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">Afwijkend</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item">
+                          <strong>Ton Askamp Oude dovere man</strong>
+                          <span>08-19</span>
+                        </div>
+                      
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+            </div>
+          </div>
+        
+          <div class="planning-week">
+            <div class="planning-week-title">Week 35</div>
+            <div class="planning-grid">
+              <div class="planning-corner"></div>
+              <div class="planning-day"><strong>Ma</strong><span>24-08</span></div><div class="planning-day"><strong>Di</strong><span>25-08</span></div><div class="planning-day"><strong>Wo</strong><span>26-08</span></div><div class="planning-day"><strong>Do</strong><span>27-08</span></div><div class="planning-day"><strong>Vr</strong><span>28-08</span></div><div class="planning-day"><strong>Za</strong><span>29-08</span></div>
+              
+                <div class="planning-slot">10-12</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">13-15</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">15-17</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+                <div class="planning-slot">Afwijkend</div>
+                
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
+                    </div>
+                  
+              
+            </div>
+          </div>
+        
+    </section>
+  
   </main>
   
   <div class="gate" id="gate">
