@@ -13,10 +13,12 @@
     .meta{font-size:13px;opacity:.86}
     main{padding:10px;display:grid;gap:8px}
     .summary,.order-row{background:white;border:1px solid var(--line);border-radius:8px;padding:9px 10px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    .order-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:start}
     .order-row.planned-order{background:#e9f5ee;border-color:#b9d6c3}
     .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
     .summary span{display:block;color:var(--muted);font-size:12px}
     .summary strong{font-size:17px}
+    .order-content{min-width:0}
     .order-main{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start}
     .order-info{min-width:0}
     .order-title-row{margin-bottom:3px}
@@ -26,10 +28,10 @@
     .line-one span,.line-two span{overflow:hidden;text-overflow:ellipsis}
     .line-two,.preference,.note{color:var(--muted);font-size:12px;margin-top:2px}
     .order-index{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:999px;background:#efe6d5;color:var(--brown);font-size:12px;font-weight:800}
-    .quick-actions{display:grid;gap:2px;justify-items:stretch;margin-top:1px}
+    .quick-actions{display:grid;gap:3px;justify-items:stretch;align-self:start}
     .action-buttons{display:flex;gap:6px}
     .phone-number{width:126px;text-align:center;color:var(--muted);font-size:11px;white-space:nowrap}
-    .order-amount{display:flex;align-items:center;justify-content:center;width:126px;height:34px;text-align:center;font-size:18px;font-weight:900;color:var(--brown);line-height:1.1}
+    .order-amount{display:flex;align-items:center;justify-content:center;width:126px;min-height:22px;text-align:center;font-size:18px;font-weight:900;color:var(--brown);line-height:1.1}
     .icon-action{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;text-align:center;text-decoration:none;font-size:18px;font-weight:800}
     .call{background:var(--green);color:white}
     .map{background:#efe6d5;color:var(--brown)}
@@ -68,7 +70,7 @@
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 10-8-2026, 22:13:54</div>
+    <div class="meta">Aangemaakt: 10-8-2026, 22:17:13</div>
   </header>
   <main>
     <section class="summary">
@@ -78,12 +80,12 @@
     </section>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">1</span>
-          <strong>G van Triest</strong>
-          <span>04-08-2026 | 10-12</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">1</span>
+            <strong>G van Triest</strong>
+            <span>04-08-2026 | 10-12</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Zaailand 9 Epe</span>
@@ -92,24 +94,24 @@
             </div>
             <div class="preference">Km 5,2 &middot; Bezorgen € 15 &middot; Tel 06-52193686</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 363</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0652193686" aria-label="Bel G van Triest">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Zaailand%209%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31652193686" target="_blank" rel="noopener" aria-label="WhatsApp G van Triest">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 363</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0652193686" aria-label="Bel G van Triest">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Zaailand%209%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31652193686" target="_blank" rel="noopener" aria-label="WhatsApp G van Triest">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">2</span>
-          <strong>Jeroen Kale</strong>
-          <span>04-08-2026 | 13-15</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">2</span>
+            <strong>Jeroen Kale</strong>
+            <span>04-08-2026 | 13-15</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Lagekamp 13 Epe</span>
@@ -118,24 +120,24 @@
             </div>
             <div class="preference">Km 7,2 &middot; Bezorgen € 16 &middot; Tel 06-40200929</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 364</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0640200929" aria-label="Bel Jeroen Kale">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Lagekamp%2013%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31640200929" target="_blank" rel="noopener" aria-label="WhatsApp Jeroen Kale">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 364</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0640200929" aria-label="Bel Jeroen Kale">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Lagekamp%2013%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31640200929" target="_blank" rel="noopener" aria-label="WhatsApp Jeroen Kale">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">3</span>
-          <strong>Erwin van Duinen</strong>
-          <span>04-08-2026 | 15-17</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">3</span>
+            <strong>Erwin van Duinen</strong>
+            <span>04-08-2026 | 15-17</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Officiersweg 109 Epe</span>
@@ -144,24 +146,24 @@
             </div>
             <div class="preference">Km 3,8 &middot; Bezorgen € 15 &middot; Tel 06-14826016</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 421</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0614826016" aria-label="Bel Erwin van Duinen">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Officiersweg%20109%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31614826016" target="_blank" rel="noopener" aria-label="WhatsApp Erwin van Duinen">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 421</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0614826016" aria-label="Bel Erwin van Duinen">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Officiersweg%20109%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31614826016" target="_blank" rel="noopener" aria-label="WhatsApp Erwin van Duinen">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">4</span>
-          <strong>J.Krijgsman</strong>
-          <span>05-08-2026 | 11-13</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">4</span>
+            <strong>J.Krijgsman</strong>
+            <span>05-08-2026 | 11-13</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Vriezinnenstede 16, VAASSEN</span>
@@ -170,24 +172,24 @@
             </div>
             <div class="preference">Km 11,5 &middot; Bezorgen € 20 &middot; Tel 0641918619</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 542</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0641918619" aria-label="Bel J.Krijgsman">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Vriezinnenstede%2016%2C%20VAASSEN" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31641918619" target="_blank" rel="noopener" aria-label="WhatsApp J.Krijgsman">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 542</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0641918619" aria-label="Bel J.Krijgsman">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Vriezinnenstede%2016%2C%20VAASSEN" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31641918619" target="_blank" rel="noopener" aria-label="WhatsApp J.Krijgsman">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">5</span>
-          <strong>Weijenberg</strong>
-          <span>05-08-2026 | 13-15</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">5</span>
+            <strong>Weijenberg</strong>
+            <span>05-08-2026 | 13-15</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Ankerstraat 6 Epe</span>
@@ -196,24 +198,24 @@
             </div>
             <div class="preference">Km 5,4 &middot; Bezorgen € 15 &middot; Tel 0578-621464</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 363</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0578621464" aria-label="Bel Weijenberg">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Ankerstraat%206%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <span class="icon-action disabled">W</span>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 363</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0578621464" aria-label="Bel Weijenberg">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Ankerstraat%206%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <span class="icon-action disabled">W</span>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">6</span>
-          <strong>Jacob van Tongeren</strong>
-          <span>06-08-2026 | 11-13</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">6</span>
+            <strong>Jacob van Tongeren</strong>
+            <span>06-08-2026 | 11-13</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Oosterhagestraat 2 Oldebroek</span>
@@ -222,24 +224,24 @@
             </div>
             <div class="preference">Km 12,7 &middot; Bezorgen € 16 &middot; Tel 06-15422895</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 741</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0615422895" aria-label="Bel Jacob van Tongeren">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Oosterhagestraat%202%20Oldebroek" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31615422895" target="_blank" rel="noopener" aria-label="WhatsApp Jacob van Tongeren">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 741</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0615422895" aria-label="Bel Jacob van Tongeren">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Oosterhagestraat%202%20Oldebroek" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31615422895" target="_blank" rel="noopener" aria-label="WhatsApp Jacob van Tongeren">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">7</span>
-          <strong>Huiskamp</strong>
-          <span>06-08-2026 | 13-15</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">7</span>
+            <strong>Huiskamp</strong>
+            <span>06-08-2026 | 13-15</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Molenweg 10 Epe</span>
@@ -248,24 +250,24 @@
             </div>
             <div class="preference">Km 3,8 &middot; Bezorgen € 15 &middot; Tel 06-29005380</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 595</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0629005380" aria-label="Bel Huiskamp">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Molenweg%2010%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31629005380" target="_blank" rel="noopener" aria-label="WhatsApp Huiskamp">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 595</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0629005380" aria-label="Bel Huiskamp">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Molenweg%2010%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31629005380" target="_blank" rel="noopener" aria-label="WhatsApp Huiskamp">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">8</span>
-          <strong>Mevr. Horst</strong>
-          <span>07-08-2026 | 11-13</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">8</span>
+            <strong>Mevr. Horst</strong>
+            <span>07-08-2026 | 11-13</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Officiersweg 9 Epe</span>
@@ -274,24 +276,24 @@
             </div>
             <div class="preference">Km 5 &middot; Bezorgen € 15 &middot; Tel 06-19922247</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 363</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0619922247" aria-label="Bel Mevr. Horst">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Officiersweg%209%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31619922247" target="_blank" rel="noopener" aria-label="WhatsApp Mevr. Horst">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 363</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0619922247" aria-label="Bel Mevr. Horst">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Officiersweg%209%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31619922247" target="_blank" rel="noopener" aria-label="WhatsApp Mevr. Horst">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">9</span>
-          <strong>Dirk Loijnga</strong>
-          <span>07-08-2026 | 14-16</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">9</span>
+            <strong>Dirk Loijnga</strong>
+            <span>07-08-2026 | 14-16</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Struikstuk 44 Epe</span>
@@ -300,24 +302,24 @@
             </div>
             <div class="preference">Km 3,5 &middot; Bezorgen € 15 &middot; Tel 06-15230403</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 595</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0615230403" aria-label="Bel Dirk Loijnga">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Struikstuk%2044%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31615230403" target="_blank" rel="noopener" aria-label="WhatsApp Dirk Loijnga">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 595</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0615230403" aria-label="Bel Dirk Loijnga">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Struikstuk%2044%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31615230403" target="_blank" rel="noopener" aria-label="WhatsApp Dirk Loijnga">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">10</span>
-          <strong>Ben de Jong</strong>
-          <span>12-08-2026 | 13-15</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">10</span>
+            <strong>Ben de Jong</strong>
+            <span>12-08-2026 | 13-15</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Grintgroeveweg 7 Epe</span>
@@ -326,24 +328,24 @@
             </div>
             <div class="preference">Km 4,5 &middot; Bezorgen € 15 &middot; Tel 0578-755212</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 740</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0578755212" aria-label="Bel Ben de Jong">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Grintgroeveweg%207%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <span class="icon-action disabled">W</span>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 740</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0578755212" aria-label="Bel Ben de Jong">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Grintgroeveweg%207%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <span class="icon-action disabled">W</span>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">11</span>
-          <strong>Gerritsen</strong>
-          <span>12-08-2026 | 15-17</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">11</span>
+            <strong>Gerritsen</strong>
+            <span>12-08-2026 | 15-17</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Machteldskamp 8 Heerde</span>
@@ -352,24 +354,24 @@
             </div>
             <div class="preference">Km 11,6 &middot; Bezorgen € 15 &middot; Tel 06-22556164</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 595</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0622556164" aria-label="Bel Gerritsen">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Machteldskamp%208%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31622556164" target="_blank" rel="noopener" aria-label="WhatsApp Gerritsen">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 595</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0622556164" aria-label="Bel Gerritsen">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Machteldskamp%208%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31622556164" target="_blank" rel="noopener" aria-label="WhatsApp Gerritsen">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">12</span>
-          <strong>Harm Smids</strong>
-          <span>13-08-2026 | 11-13</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">12</span>
+            <strong>Harm Smids</strong>
+            <span>13-08-2026 | 11-13</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>De Soppeweg 8, Wezep</span>
@@ -378,24 +380,24 @@
             </div>
             <div class="preference">Km 17 &middot; Bezorgen € 21 &middot; Tel 0614626480</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 746</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0614626480" aria-label="Bel Harm Smids">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=De%20Soppeweg%208%2C%20Wezep" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31614626480" target="_blank" rel="noopener" aria-label="WhatsApp Harm Smids">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 746</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0614626480" aria-label="Bel Harm Smids">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=De%20Soppeweg%208%2C%20Wezep" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31614626480" target="_blank" rel="noopener" aria-label="WhatsApp Harm Smids">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">13</span>
-          <strong>Ton Askamp Oude dovere man</strong>
-          <span>19-08-2026</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">13</span>
+            <strong>Ton Askamp Oude dovere man</strong>
+            <span>19-08-2026</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Nilantsweg 41-1 Zwolle</span>
@@ -404,24 +406,24 @@
             </div>
             <div class="preference">Km 24 &middot; Bezorgen € 43 &middot; Tel 06-12518782</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 565</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0612518782" aria-label="Bel Ton Askamp Oude dovere man">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Nilantsweg%2041-1%20Zwolle" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31612518782" target="_blank" rel="noopener" aria-label="WhatsApp Ton Askamp Oude dovere man">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 565</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0612518782" aria-label="Bel Ton Askamp Oude dovere man">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Nilantsweg%2041-1%20Zwolle" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31612518782" target="_blank" rel="noopener" aria-label="WhatsApp Ton Askamp Oude dovere man">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">14</span>
-          <strong>Arnold Mercury</strong>
-          <span>21-08-2026 | 13-15</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">14</span>
+            <strong>Arnold Mercury</strong>
+            <span>21-08-2026 | 13-15</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Almelose Kanaal 1 Zwolle</span>
@@ -430,24 +432,24 @@
             </div>
             <div class="preference">Km 26,9 &middot; Bezorgen € 34 &middot; Tel 06-22065373</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 614</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0622065373" aria-label="Bel Arnold Mercury">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Almelose%20Kanaal%201%20Zwolle" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31622065373" target="_blank" rel="noopener" aria-label="WhatsApp Arnold Mercury">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 614</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0622065373" aria-label="Bel Arnold Mercury">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Almelose%20Kanaal%201%20Zwolle" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31622065373" target="_blank" rel="noopener" aria-label="WhatsApp Arnold Mercury">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">15</span>
-          <strong>Jan-Kees Harmsen</strong>
-          <span>21-08-2026 | 15-17</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">15</span>
+            <strong>Jan-Kees Harmsen</strong>
+            <span>21-08-2026 | 15-17</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Buys Ballotstraat 23, Apeldoorn</span>
@@ -456,24 +458,24 @@
             </div>
             <div class="preference">Km 19 &middot; Bezorgen € 24 &middot; Tel 06-39214065</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 749</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0639214065" aria-label="Bel Jan-Kees Harmsen">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Buys%20Ballotstraat%2023%2C%20Apeldoorn" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31639214065" target="_blank" rel="noopener" aria-label="WhatsApp Jan-Kees Harmsen">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 749</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0639214065" aria-label="Bel Jan-Kees Harmsen">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Buys%20Ballotstraat%2023%2C%20Apeldoorn" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31639214065" target="_blank" rel="noopener" aria-label="WhatsApp Jan-Kees Harmsen">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">16</span>
-          <strong>Wim van Waardhuizen</strong>
-          <span>31-08-2026 | 10-12</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">16</span>
+            <strong>Wim van Waardhuizen</strong>
+            <span>31-08-2026 | 10-12</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Griftdijk 3a, Heerde</span>
@@ -482,24 +484,24 @@
             </div>
             <div class="preference">Km 12 &middot; Bezorgen € 21 &middot; Tel 0640054562</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 456</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0640054562" aria-label="Bel Wim van Waardhuizen">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Griftdijk%203a%2C%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31640054562" target="_blank" rel="noopener" aria-label="WhatsApp Wim van Waardhuizen">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 456</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0640054562" aria-label="Bel Wim van Waardhuizen">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Griftdijk%203a%2C%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31640054562" target="_blank" rel="noopener" aria-label="WhatsApp Wim van Waardhuizen">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">17</span>
-          <strong>Douma</strong>
-          <span>04-09-2026 | 10-12</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">17</span>
+            <strong>Douma</strong>
+            <span>04-09-2026 | 10-12</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>groote woldweg 88, oosterwolde gld.</span>
@@ -508,24 +510,24 @@
             </div>
             <div class="preference">Km 15,7 &middot; Bezorgen € 20 &middot; Tel 06-53482314</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 745</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0653482314" aria-label="Bel Douma">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=groote%20woldweg%2088%2C%20oosterwolde%20gld." target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31653482314" target="_blank" rel="noopener" aria-label="WhatsApp Douma">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 745</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0653482314" aria-label="Bel Douma">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=groote%20woldweg%2088%2C%20oosterwolde%20gld." target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31653482314" target="_blank" rel="noopener" aria-label="WhatsApp Douma">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">18</span>
-          <strong>Jan van Winsum</strong>
-          <span>15-09-2026</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">18</span>
+            <strong>Jan van Winsum</strong>
+            <span>15-09-2026</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Oldekampshof 2 Heerde</span>
@@ -534,24 +536,24 @@
             </div>
             <div class="preference">Km 11,8 &middot; Bezorgen € 15 &middot; Tel 06-21856412</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 740</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0621856412" aria-label="Bel Jan van Winsum">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Oldekampshof%202%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31621856412" target="_blank" rel="noopener" aria-label="WhatsApp Jan van Winsum">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 740</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0621856412" aria-label="Bel Jan van Winsum">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Oldekampshof%202%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31621856412" target="_blank" rel="noopener" aria-label="WhatsApp Jan van Winsum">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row planned-order">
-        <div class="line-one order-title-row">
-          <span class="order-index">19</span>
-          <strong>M. Hergaarden</strong>
-          <span>16-10-2026</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">19</span>
+            <strong>M. Hergaarden</strong>
+            <span>16-10-2026</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Zuppeldseweg 31 Heerde</span>
@@ -560,24 +562,24 @@
             </div>
             <div class="preference">Km 12 &middot; Bezorgen € 22 &middot; Tel 06-83492685</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 544</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0683492685" aria-label="Bel M. Hergaarden">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Zuppeldseweg%2031%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31683492685" target="_blank" rel="noopener" aria-label="WhatsApp M. Hergaarden">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 544</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0683492685" aria-label="Bel M. Hergaarden">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Zuppeldseweg%2031%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31683492685" target="_blank" rel="noopener" aria-label="WhatsApp M. Hergaarden">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">20</span>
-          <strong>Ineke Rijken</strong>
-          <span>Voorkeur Eind juli</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">20</span>
+            <strong>Ineke Rijken</strong>
+            <span>Voorkeur Eind juli</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Tongerenseweg 13 Epe</span>
@@ -586,24 +588,24 @@
             </div>
             <div class="preference">Km 5 &middot; Bezorgen € 15 &middot; Tel 06-44682189</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 1.770</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0644682189" aria-label="Bel Ineke Rijken">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Tongerenseweg%2013%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31644682189" target="_blank" rel="noopener" aria-label="WhatsApp Ineke Rijken">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 1.770</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0644682189" aria-label="Bel Ineke Rijken">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Tongerenseweg%2013%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31644682189" target="_blank" rel="noopener" aria-label="WhatsApp Ineke Rijken">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">21</span>
-          <strong>Elleke Frumau</strong>
-          <span>Voorkeur Mei/juni</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">21</span>
+            <strong>Elleke Frumau</strong>
+            <span>Voorkeur Mei/juni</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Venneweg 4 Epe</span>
@@ -612,24 +614,24 @@
             </div>
             <div class="preference">Km 4,4 &middot; Bezorgen € 15 &middot; Tel ??</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 363</div>
-            <div class="action-buttons">
-              <span class="icon-action disabled">&#9742;</span>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Venneweg%204%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <span class="icon-action disabled">W</span>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 363</div>
+          <div class="action-buttons">
+            <span class="icon-action disabled">&#9742;</span>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Venneweg%204%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <span class="icon-action disabled">W</span>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">22</span>
-          <strong>Hilbert Drost</strong>
-          <span>Voorkeur Eind sept</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">22</span>
+            <strong>Hilbert Drost</strong>
+            <span>Voorkeur Eind sept</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Fa Molijnlaan 30 Nunspeet</span>
@@ -638,24 +640,24 @@
             </div>
             <div class="preference">Km 10,8 &middot; Bezorgen € 15 &middot; Tel 06-23563847</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 595</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0623563847" aria-label="Bel Hilbert Drost">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Fa%20Molijnlaan%2030%20Nunspeet" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31623563847" target="_blank" rel="noopener" aria-label="WhatsApp Hilbert Drost">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 595</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0623563847" aria-label="Bel Hilbert Drost">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Fa%20Molijnlaan%2030%20Nunspeet" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31623563847" target="_blank" rel="noopener" aria-label="WhatsApp Hilbert Drost">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">23</span>
-          <strong>Hilbeert Drost</strong>
-          <span>Voorkeur 2 wk jan</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">23</span>
+            <strong>Hilbeert Drost</strong>
+            <span>Voorkeur 2 wk jan</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Fa Molijnlaan 30 Nunspeet</span>
@@ -664,24 +666,24 @@
             </div>
             <div class="preference">Km 11 &middot; Bezorgen € 15 &middot; Tel 06-23563847</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 595</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0623563847" aria-label="Bel Hilbeert Drost">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Fa%20Molijnlaan%2030%20Nunspeet" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31623563847" target="_blank" rel="noopener" aria-label="WhatsApp Hilbeert Drost">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 595</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0623563847" aria-label="Bel Hilbeert Drost">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Fa%20Molijnlaan%2030%20Nunspeet" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31623563847" target="_blank" rel="noopener" aria-label="WhatsApp Hilbeert Drost">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">24</span>
-          <strong>Monique Punt</strong>
-          <span>Voorkeur Aug</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">24</span>
+            <strong>Monique Punt</strong>
+            <span>Voorkeur Aug</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Valkenweg 103 Apeldoorn</span>
@@ -690,24 +692,24 @@
             </div>
             <div class="preference">Km 29,6 &middot; Bezorgen € 37 &middot; Tel 06-30849072</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 762</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0630849072" aria-label="Bel Monique Punt">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Valkenweg%20103%20Apeldoorn" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31630849072" target="_blank" rel="noopener" aria-label="WhatsApp Monique Punt">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 762</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0630849072" aria-label="Bel Monique Punt">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Valkenweg%20103%20Apeldoorn" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31630849072" target="_blank" rel="noopener" aria-label="WhatsApp Monique Punt">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">25</span>
-          <strong>Arjen Hup</strong>
-          <span>Voorkeur Aug</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">25</span>
+            <strong>Arjen Hup</strong>
+            <span>Voorkeur Aug</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>De Heuve 39 Epe</span>
@@ -716,24 +718,24 @@
             </div>
             <div class="preference">Km 4,7 &middot; Bezorgen € 15 &middot; Tel 06-28894536</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 537</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0628894536" aria-label="Bel Arjen Hup">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=De%20Heuve%2039%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31628894536" target="_blank" rel="noopener" aria-label="WhatsApp Arjen Hup">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 537</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0628894536" aria-label="Bel Arjen Hup">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=De%20Heuve%2039%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31628894536" target="_blank" rel="noopener" aria-label="WhatsApp Arjen Hup">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">26</span>
-          <strong>Van Vemde</strong>
-          <span>Voorkeur Aug</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">26</span>
+            <strong>Van Vemde</strong>
+            <span>Voorkeur Aug</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Wemeweg 1 Epe</span>
@@ -742,24 +744,24 @@
             </div>
             <div class="preference">Km 4,1 &middot; Bezorgen € 15 &middot; Tel 06-10067623</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 363</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0610067623" aria-label="Bel Van Vemde">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Wemeweg%201%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31610067623" target="_blank" rel="noopener" aria-label="WhatsApp Van Vemde">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 363</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0610067623" aria-label="Bel Van Vemde">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Wemeweg%201%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31610067623" target="_blank" rel="noopener" aria-label="WhatsApp Van Vemde">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">27</span>
-          <strong>A v Tongeren</strong>
-          <span>Voorkeur 04-08-2026</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">27</span>
+            <strong>A v Tongeren</strong>
+            <span>Voorkeur 04-08-2026</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Passestraat 21, Elburg</span>
@@ -768,24 +770,24 @@
             </div>
             <div class="preference">Km 12,1 &middot; Bezorgen € 21 &middot; Tel 0640721468</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 543</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0640721468" aria-label="Bel A v Tongeren">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Passestraat%2021%2C%20Elburg" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31640721468" target="_blank" rel="noopener" aria-label="WhatsApp A v Tongeren">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 543</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0640721468" aria-label="Bel A v Tongeren">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Passestraat%2021%2C%20Elburg" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31640721468" target="_blank" rel="noopener" aria-label="WhatsApp A v Tongeren">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">28</span>
-          <strong>Jan-Willem Café</strong>
-          <span>Voorkeur 05-08-2026</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">28</span>
+            <strong>Jan-Willem Café</strong>
+            <span>Voorkeur 05-08-2026</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Eperweg 9, ‘t Harde</span>
@@ -794,24 +796,24 @@
             </div>
             <div class="preference">Km 8,3 &middot; Bezorgen € 15 &middot; Tel 06 22029054</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 537</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0622029054" aria-label="Bel Jan-Willem Café">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Eperweg%209%2C%20%E2%80%98t%20Harde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31622029054" target="_blank" rel="noopener" aria-label="WhatsApp Jan-Willem Café">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 537</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0622029054" aria-label="Bel Jan-Willem Café">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Eperweg%209%2C%20%E2%80%98t%20Harde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31622029054" target="_blank" rel="noopener" aria-label="WhatsApp Jan-Willem Café">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">29</span>
-          <strong>W. Agterhuis</strong>
-          <span>Voorkeur 07-08-2026</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">29</span>
+            <strong>W. Agterhuis</strong>
+            <span>Voorkeur 07-08-2026</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Hommelbrink 2, 8051PV Hattem</span>
@@ -820,24 +822,24 @@
             </div>
             <div class="preference">Km 19,6 &middot; Bezorgen € 34 &middot; Tel 06-26896283</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 556</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0626896283" aria-label="Bel W. Agterhuis">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Hommelbrink%202%2C%208051PV%20Hattem" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31626896283" target="_blank" rel="noopener" aria-label="WhatsApp W. Agterhuis">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 556</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0626896283" aria-label="Bel W. Agterhuis">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Hommelbrink%202%2C%208051PV%20Hattem" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31626896283" target="_blank" rel="noopener" aria-label="WhatsApp W. Agterhuis">W</a>
           </div>
         </div>
       </article>
     
       <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">30</span>
-          <strong>Frank Walta</strong>
-          <span>Nog plannen</span>
-        </div>
-        <div class="order-main">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">30</span>
+            <strong>Frank Walta</strong>
+            <span>Nog plannen</span>
+          </div>
           <div class="order-info">
             <div class="line-two">
               <span>Hessenmeer 36 Ermelo</span>
@@ -846,13 +848,13 @@
             </div>
             <div class="preference">Km 24,9 &middot; Bezorgen € 31 &middot; Tel 06-55145534</div>
           </div>
-          <div class="quick-actions">
-            <div class="order-amount">€ 756</div>
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0655145534" aria-label="Bel Frank Walta">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Hessenmeer%2036%20Ermelo" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31655145534" target="_blank" rel="noopener" aria-label="WhatsApp Frank Walta">W</a>
-            </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">€ 756</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0655145534" aria-label="Bel Frank Walta">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Hessenmeer%2036%20Ermelo" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31655145534" target="_blank" rel="noopener" aria-label="WhatsApp Frank Walta">W</a>
           </div>
         </div>
       </article>
