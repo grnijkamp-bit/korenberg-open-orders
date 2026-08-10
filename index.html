@@ -13,6 +13,7 @@
     .meta{font-size:13px;opacity:.86}
     main{padding:10px;display:grid;gap:8px}
     .summary,.order-row{background:white;border:1px solid var(--line);border-radius:8px;padding:9px 10px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    .order-row.planned-order{background:#e9f5ee;border-color:#b9d6c3}
     .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
     .summary span{display:block;color:var(--muted);font-size:12px}
     .summary strong{font-size:17px}
@@ -67,7 +68,7 @@
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 9-8-2026, 20:53:56</div>
+    <div class="meta">Aangemaakt: 10-8-2026, 14:14:17</div>
   </header>
   <main>
     <section class="summary">
@@ -76,7 +77,7 @@
       <div><span>Totaal</span><strong>€ 13.871</strong></div>
     </section>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
           <span class="order-index">1</span>
           <strong>Ben de Jong</strong>
@@ -104,7 +105,7 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
           <span class="order-index">2</span>
           <strong>Gerritsen</strong>
@@ -132,9 +133,37 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
           <span class="order-index">3</span>
+          <strong>Harm Smids</strong>
+          <span>13-08-2026 | 11-13</span>
+          <em>€ 746</em>
+        </div>
+        <div class="order-main">
+          <div class="order-info">
+            <div class="line-two">
+              <span>De Soppeweg 8, Wezep</span>
+              <span>Eik en Beuk</span>
+              <span>5 m3</span>
+            </div>
+            <div class="note">Hoe heeft u ons gevonden?:</div>
+            <div class="preference">Voorkeur: 11-08-2026 &middot; Km 17 &middot; Bezorgen € 21</div>
+          </div>
+          <div class="quick-actions">
+            <div class="action-buttons">
+              <a class="icon-action call" href="tel:0614626480" aria-label="Bel Harm Smids">&#9742;</a>
+              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=De%20Soppeweg%208%2C%20Wezep" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+              <a class="icon-action whatsapp" href="https://wa.me/31614626480" target="_blank" rel="noopener" aria-label="WhatsApp Harm Smids">W</a>
+            </div>
+            <div class="phone-number">0614626480</div>
+          </div>
+        </div>
+      </article>
+    
+      <article class="order-row planned-order">
+        <div class="line-one order-title-row">
+          <span class="order-index">4</span>
           <strong>Ton Askamp Oude dovere man</strong>
           <span>19-08-2026</span>
           <em>€ 565</em>
@@ -160,9 +189,9 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
-          <span class="order-index">4</span>
+          <span class="order-index">5</span>
           <strong>Arnold Mercury</strong>
           <span>21-08-2026 | 13-15</span>
           <em>€ 614</em>
@@ -188,9 +217,37 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
-          <span class="order-index">5</span>
+          <span class="order-index">6</span>
+          <strong>Jan-Kees Harmsen</strong>
+          <span>21-08-2026 | 15-17</span>
+          <em>€ 749</em>
+        </div>
+        <div class="order-main">
+          <div class="order-info">
+            <div class="line-two">
+              <span>Buys Ballotstraat 23, Apeldoorn</span>
+              <span>Eik</span>
+              <span>5 m3</span>
+            </div>
+            
+            <div class="preference">Voorkeur: 15-08-2026 &middot; Km 19 &middot; Bezorgen € 24</div>
+          </div>
+          <div class="quick-actions">
+            <div class="action-buttons">
+              <a class="icon-action call" href="tel:0639214065" aria-label="Bel Jan-Kees Harmsen">&#9742;</a>
+              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Buys%20Ballotstraat%2023%2C%20Apeldoorn" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+              <a class="icon-action whatsapp" href="https://wa.me/31639214065" target="_blank" rel="noopener" aria-label="WhatsApp Jan-Kees Harmsen">W</a>
+            </div>
+            <div class="phone-number">06-39214065</div>
+          </div>
+        </div>
+      </article>
+    
+      <article class="order-row planned-order">
+        <div class="line-one order-title-row">
+          <span class="order-index">7</span>
           <strong>Wim van Waardhuizen</strong>
           <span>31-08-2026 | 10-12</span>
           <em>€ 456</em>
@@ -216,9 +273,9 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
-          <span class="order-index">6</span>
+          <span class="order-index">8</span>
           <strong>Douma</strong>
           <span>04-09-2026 | 10-12</span>
           <em>€ 745</em>
@@ -244,9 +301,9 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
-          <span class="order-index">7</span>
+          <span class="order-index">9</span>
           <strong>Jan van Winsum</strong>
           <span>15-09-2026</span>
           <em>€ 740</em>
@@ -272,9 +329,9 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order">
         <div class="line-one order-title-row">
-          <span class="order-index">8</span>
+          <span class="order-index">10</span>
           <strong>M. Hergaarden</strong>
           <span>16-10-2026</span>
           <em>€ 544</em>
@@ -302,7 +359,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">9</span>
+          <span class="order-index">11</span>
           <strong>Ineke Rijken</strong>
           <span>Nog plannen</span>
           <em>€ 1.770</em>
@@ -330,7 +387,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">10</span>
+          <span class="order-index">12</span>
           <strong>Elleke Frumau</strong>
           <span>Nog plannen</span>
           <em>€ 363</em>
@@ -358,7 +415,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">11</span>
+          <span class="order-index">13</span>
           <strong>Hilbert Drost</strong>
           <span>Nog plannen</span>
           <em>€ 595</em>
@@ -386,7 +443,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">12</span>
+          <span class="order-index">14</span>
           <strong>Hilbeert Drost</strong>
           <span>Nog plannen</span>
           <em>€ 595</em>
@@ -414,7 +471,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">13</span>
+          <span class="order-index">15</span>
           <strong>Monique Punt</strong>
           <span>Nog plannen</span>
           <em>€ 762</em>
@@ -442,7 +499,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">14</span>
+          <span class="order-index">16</span>
           <strong>Arjen Hup</strong>
           <span>Nog plannen</span>
           <em>€ 537</em>
@@ -470,7 +527,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">15</span>
+          <span class="order-index">17</span>
           <strong>Van Vemde</strong>
           <span>Nog plannen</span>
           <em>€ 363</em>
@@ -498,7 +555,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">16</span>
+          <span class="order-index">18</span>
           <strong>A v Tongeren</strong>
           <span>Aug</span>
           <em>€ 543</em>
@@ -526,7 +583,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">17</span>
+          <span class="order-index">19</span>
           <strong>Jan-Willem Café</strong>
           <span>Sept</span>
           <em>€ 537</em>
@@ -554,7 +611,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">18</span>
+          <span class="order-index">20</span>
           <strong>W. Agterhuis</strong>
           <span>Aug</span>
           <em>€ 556</em>
@@ -582,7 +639,7 @@
     
       <article class="order-row">
         <div class="line-one order-title-row">
-          <span class="order-index">19</span>
+          <span class="order-index">21</span>
           <strong>Frank Walta</strong>
           <span>Nog plannen</span>
           <em>€ 756</em>
@@ -604,62 +661,6 @@
               <a class="icon-action whatsapp" href="https://wa.me/31655145534" target="_blank" rel="noopener" aria-label="WhatsApp Frank Walta">W</a>
             </div>
             <div class="phone-number">06-55145534</div>
-          </div>
-        </div>
-      </article>
-    
-      <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">20</span>
-          <strong>Jan-Kees Harmsen</strong>
-          <span>Nog plannen</span>
-          <em>€ 749</em>
-        </div>
-        <div class="order-main">
-          <div class="order-info">
-            <div class="line-two">
-              <span>Buys Ballotstraat 23, Apeldoorn</span>
-              <span>Eik</span>
-              <span>5 m3</span>
-            </div>
-            <div class="note">Ik twijfel tussen eiken alleen of mix met beuken. Ik heb aanmaakhout dus daarom denk ik dat eiken wel goed is. Hoor het graag.</div>
-            <div class="preference">Voorkeur: 15-08-2026 &middot; Km 19 &middot; Bezorgen € 24</div>
-          </div>
-          <div class="quick-actions">
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0639214065" aria-label="Bel Jan-Kees Harmsen">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Buys%20Ballotstraat%2023%2C%20Apeldoorn" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31639214065" target="_blank" rel="noopener" aria-label="WhatsApp Jan-Kees Harmsen">W</a>
-            </div>
-            <div class="phone-number">06-39214065</div>
-          </div>
-        </div>
-      </article>
-    
-      <article class="order-row">
-        <div class="line-one order-title-row">
-          <span class="order-index">21</span>
-          <strong>Harm Smids</strong>
-          <span>Nog plannen</span>
-          <em>€ 746</em>
-        </div>
-        <div class="order-main">
-          <div class="order-info">
-            <div class="line-two">
-              <span>De Soppeweg 8, Wezep</span>
-              <span>Eik en Beuk</span>
-              <span>5 m3</span>
-            </div>
-            <div class="note">Hoe heeft u ons gevonden?:</div>
-            <div class="preference">Voorkeur: 11-08-2026 &middot; Km 17 &middot; Bezorgen € 21</div>
-          </div>
-          <div class="quick-actions">
-            <div class="action-buttons">
-              <a class="icon-action call" href="tel:0614626480" aria-label="Bel Harm Smids">&#9742;</a>
-              <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=De%20Soppeweg%208%2C%20Wezep" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-              <a class="icon-action whatsapp" href="https://wa.me/31614626480" target="_blank" rel="noopener" aria-label="WhatsApp Harm Smids">W</a>
-            </div>
-            <div class="phone-number">0614626480</div>
           </div>
         </div>
       </article>
@@ -860,8 +861,13 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell ">
-                      <span class="free">vrij</span>
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item">
+                          <strong>Harm Smids</strong>
+                          <span>11-13</span>
+                        </div>
+                      
                     </div>
                   
                     <div class="planning-cell ">
@@ -1082,8 +1088,13 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell ">
-                      <span class="free">vrij</span>
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item">
+                          <strong>Jan-Kees Harmsen</strong>
+                          <span>15-17</span>
+                        </div>
+                      
                     </div>
                   
                     <div class="planning-cell ">
