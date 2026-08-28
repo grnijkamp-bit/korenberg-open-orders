@@ -16,6 +16,7 @@
     .order-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:start}
     .order-row.planned-order{background:#e9f5ee;border-color:#b9d6c3}
     .order-row.planned-order-provisional{background:#fff2d8;border-color:#e5b86d}
+    .order-row.planned-order-call{background:#eef3ff;border-color:#9aadd8}
     .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
     .summary span{display:block;color:var(--muted);font-size:12px}
     .summary strong{font-size:17px}
@@ -63,7 +64,9 @@
     .planning-cell{min-height:44px;background:#fffdf8;font-size:11px}
     .planning-cell.filled{background:#e9f5ee}
     .planning-cell:has(.planning-item-provisional){background:#fff2d8}
+    .planning-cell:has(.planning-item-call){background:#eef3ff}
     .planning-item{display:grid;gap:1px}
+    .planning-item-call{background:#eef3ff;border:1px solid #9aadd8;border-radius:6px;padding:4px}
     .planning-item-provisional{background:#fff2d8;border:1px solid #e5b86d;border-radius:6px;padding:4px}
     .planning-item-final{background:#e9f5ee;border:1px solid #b9d6c3;border-radius:6px;padding:4px}
     .planning-item + .planning-item{margin-top:5px;padding-top:5px;border-top:1px solid #c8dccf}
@@ -74,7 +77,7 @@
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 28-8-2026, 18:16:19</div>
+    <div class="meta">Aangemaakt: 28-8-2026, 18:28:59</div>
   </header>
   <main>
     <section class="summary">
@@ -526,7 +529,7 @@
         </div>
       </article>
     
-      <article class="order-row">
+      <article class="order-row planned-order-call">
         <div class="order-content">
           <div class="line-one order-title-row">
             <span class="order-index">18</span>
