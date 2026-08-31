@@ -65,8 +65,10 @@
     .planning-cell.filled{background:#e9f5ee}
     .planning-cell:has(.planning-item-provisional){background:#fff2d8}
     .planning-cell:has(.planning-item-call){background:#eef3ff}
+    .planning-cell:has(.planning-item-other){background:#fff3f1}
     .planning-item{display:grid;gap:1px}
     .planning-item-call{background:#eef3ff;border:1px solid #9aadd8;border-radius:6px;padding:4px}
+    .planning-item-other{background:#ffe8e4;border:1px solid #d9978d;border-radius:6px;padding:4px}
     .planning-item-provisional{background:#fff2d8;border:1px solid #e5b86d;border-radius:6px;padding:4px}
     .planning-item-final{background:#e9f5ee;border:1px solid #b9d6c3;border-radius:6px;padding:4px}
     .planning-item + .planning-item{margin-top:5px;padding-top:5px;border-top:1px solid #c8dccf}
@@ -77,7 +79,7 @@
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 31-8-2026, 13:42:07</div>
+    <div class="meta">Aangemaakt: 31-8-2026, 14:16:37</div>
   </header>
   <main>
     <section class="summary">
@@ -749,8 +751,13 @@
                       
                     </div>
                   
-                    <div class="planning-cell ">
-                      <span class="free">vrij</span>
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item planning-item-other">
+                          <strong>Nelleke na 12.30 uur weg</strong>
+                          <span>9-11</span>
+                        </div>
+                      
                     </div>
                   
               
@@ -1053,8 +1060,13 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell ">
-                      <span class="free">vrij</span>
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item planning-item-other">
+                          <strong>Nelleke na 12.00 weg</strong>
+                          <span>9-11</span>
+                        </div>
+                      
                     </div>
                   
                     <div class="planning-cell ">
