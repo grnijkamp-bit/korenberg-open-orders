@@ -17,6 +17,7 @@
     .order-row.planned-order{background:#e9f5ee;border-color:#b9d6c3}
     .order-row.planned-order-provisional{background:#fff2d8;border-color:#e5b86d}
     .order-row.planned-order-call{background:#eef3ff;border-color:#9aadd8}
+    .order-row.planned-order-response{background:#f2edff;border-color:#b8a6e2}
     .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
     .summary span{display:block;color:var(--muted);font-size:12px}
     .summary strong{font-size:17px}
@@ -65,9 +66,11 @@
     .planning-cell.filled{background:#e9f5ee}
     .planning-cell:has(.planning-item-provisional){background:#fff2d8}
     .planning-cell:has(.planning-item-call){background:#eef3ff}
+    .planning-cell:has(.planning-item-response){background:#f2edff}
     .planning-cell:has(.planning-item-other){background:#fff3f1}
     .planning-item{display:grid;gap:1px}
     .planning-item-call{background:#eef3ff;border:1px solid #9aadd8;border-radius:6px;padding:4px}
+    .planning-item-response{background:#f2edff;border:1px solid #b8a6e2;border-radius:6px;padding:4px}
     .planning-item-other{background:#ffe8e4;border:1px solid #d9978d;border-radius:6px;padding:4px}
     .planning-item-provisional{background:#fff2d8;border:1px solid #e5b86d;border-radius:6px;padding:4px}
     .planning-item-final{background:#e9f5ee;border:1px solid #b9d6c3;border-radius:6px;padding:4px}
@@ -79,14 +82,14 @@
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 6-10-2026, 22:27:39</div>
+    <div class="meta">Aangemaakt: 6-10-2026, 22:46:45</div>
   </header>
   <main>
     <section class="summary">
       <div><span>Open orders</span><strong>32</strong></div>
       <div><span>Voorraad</span><strong>62</strong></div>
       <div><span>Leveren</span><strong>126,8</strong></div>
-      <div><span>Totaal</span><strong>€ 19.146</strong></div>
+      <div><span>Totaal</span><strong>€ 19.152</strong></div>
     </section>
     
       <article class="order-row planned-order-call">
@@ -489,23 +492,23 @@
         </div>
       </article>
     
-      <article class="order-row planned-order">
+      <article class="order-row planned-order-provisional">
         <div class="order-content">
           <div class="line-one order-title-row">
             <span class="order-index">17</span>
             <strong>M. Hergaarden</strong>
-            <span>16-10-2026 | Selecteer</span>
+            <span>16-10-2026 | 15-17</span>
           </div>
           <div class="order-info">
             <div class="line-two">
               <span>Zuppeldseweg 31 Heerde</span>
               <span>Beuk 3,6 m3</span>
             </div>
-            <div class="preference">Km 12 &middot; Bezorgen € 22 &middot; Tel 06-83492685</div>
+            <div class="preference">Km 12,4 &middot; Bezorgen € 28 &middot; Tel 06-83492685</div>
           </div>
         </div>
         <div class="quick-actions">
-          <div class="order-amount">3,6 M3 / € 544</div>
+          <div class="order-amount">3,6 M3 / € 550</div>
           <div class="action-buttons">
             <a class="icon-action call" href="tel:0683492685" aria-label="Bel M. Hergaarden">&#9742;</a>
             <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Zuppeldseweg%2031%20Heerde" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
@@ -940,7 +943,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>chris Schooten</strong>
                           <span>11-13</span>
                         </div>
@@ -953,7 +956,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Bram Kalis</strong>
                           <span>11-13</span>
                         </div>
@@ -962,7 +965,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Martijn Kort</strong>
                           <span>11-13</span>
                         </div>
@@ -982,7 +985,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Bergwerff Aldert</strong>
                           <span>13-15</span>
                         </div>
@@ -995,7 +998,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Strieker</strong>
                           <span>13-15</span>
                         </div>
@@ -1004,7 +1007,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Wim van Waardhuizen</strong>
                           <span>13-15</span>
                         </div>
@@ -1032,7 +1035,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Nijhof</strong>
                           <span>15-17</span>
                         </div>
@@ -1041,12 +1044,12 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Jaap van Tiel</strong>
                           <span>15-17</span>
                         </div>
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Rob Turenhout</strong>
                           <span>15-17</span>
                         </div>
@@ -1129,7 +1132,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Jan van Winsum</strong>
                           <span>11-13</span>
                         </div>
@@ -1142,12 +1145,12 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Dick van Raalte</strong>
                           <span>11-13</span>
                         </div>
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Janny van Doorn</strong>
                           <span>11-13</span>
                         </div>
@@ -1184,7 +1187,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Edwin Lugt</strong>
                           <span>13-15</span>
                         </div>
@@ -1193,7 +1196,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Erik Sax</strong>
                           <span>13-15</span>
                         </div>
@@ -1223,8 +1226,13 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell ">
-                      <span class="free">vrij</span>
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item planning-item-provisional">
+                          <strong>M. Hergaarden</strong>
+                          <span>15-17</span>
+                        </div>
+                      
                     </div>
                   
                     <div class="planning-cell ">
@@ -1250,13 +1258,8 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell filled">
-                      
-                        <div class="planning-item planning-item-final">
-                          <strong>M. Hergaarden</strong>
-                          <span>Selecteer</span>
-                        </div>
-                      
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
                     </div>
                   
                     <div class="planning-cell ">
@@ -1384,7 +1387,7 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>S van Damme</strong>
                           <span>15-17</span>
                         </div>
@@ -1479,12 +1482,12 @@
                   
                     <div class="planning-cell filled">
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Adema Wout (W.J.)</strong>
                           <span>11-13</span>
                         </div>
                       
-                        <div class="planning-item planning-item-final">
+                        <div class="planning-item planning-item">
                           <strong>Menno Zijlstra</strong>
                           <span>11-13</span>
                         </div>
