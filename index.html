@@ -17,7 +17,7 @@
     .order-row.planned-order{background:#e9f5ee;border-color:#b9d6c3}
     .order-row.planned-order-provisional{background:#fff2d8;border-color:#e5b86d}
     .order-row.planned-order-call{background:#eef3ff;border-color:#9aadd8}
-    .order-row.planned-order-response{background:#f2edff;border-color:#b8a6e2}
+    .order-row.planned-order-response{background:#cff7f2;border-color:#59b8ae}
     .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
     .summary span{display:block;color:var(--muted);font-size:12px}
     .summary strong{font-size:17px}
@@ -66,11 +66,11 @@
     .planning-cell.filled{background:#e9f5ee}
     .planning-cell:has(.planning-item-provisional){background:#fff2d8}
     .planning-cell:has(.planning-item-call){background:#eef3ff}
-    .planning-cell:has(.planning-item-response){background:#f2edff}
+    .planning-cell:has(.planning-item-response){background:#cff7f2}
     .planning-cell:has(.planning-item-other){background:#fff3f1}
     .planning-item{display:grid;gap:1px}
     .planning-item-call{background:#eef3ff;border:1px solid #9aadd8;border-radius:6px;padding:4px}
-    .planning-item-response{background:#f2edff;border:1px solid #b8a6e2;border-radius:6px;padding:4px}
+    .planning-item-response{background:#cff7f2;border:1px solid #59b8ae;border-radius:6px;padding:4px}
     .planning-item-other{background:#ffe8e4;border:1px solid #d9978d;border-radius:6px;padding:4px}
     .planning-item-provisional{background:#fff2d8;border:1px solid #e5b86d;border-radius:6px;padding:4px}
     .planning-item-final{background:#e9f5ee;border:1px solid #b9d6c3;border-radius:6px;padding:4px}
@@ -82,7 +82,7 @@
 <body>
   <header>
     <h1>Open orders Korenberg Brandhout</h1>
-    <div class="meta">Aangemaakt: 27-10-2026, 11:23:41</div>
+    <div class="meta">Aangemaakt: 27-10-2026, 11:35:49</div>
   </header>
   <main>
     <section class="summary">
@@ -217,35 +217,10 @@
         </div>
       </article>
     
-      <article class="order-row planned-order">
-        <div class="order-content">
-          <div class="line-one order-title-row">
-            <span class="order-index">6</span>
-            <strong>Henk Jansen</strong>
-            <span>30-10-2026 | 15-17</span>
-          </div>
-          <div class="order-info">
-            <div class="line-two">
-              <span>Brouwersmolenweg 393 Ugchelen</span>
-              <span>Eik 1,6 m3 | Beuk 2,4 m3</span>
-            </div>
-            <div class="preference">Km 32,2 &middot; Bezorgen € 64 &middot; Tel 06-23596416</div>
-          </div>
-        </div>
-        <div class="quick-actions">
-          <div class="order-amount">4 M3 / € 644</div>
-          <div class="action-buttons">
-            <a class="icon-action call" href="tel:0623596416" aria-label="Bel Henk Jansen">&#9742;</a>
-            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Brouwersmolenweg%20393%20Ugchelen" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
-            <a class="icon-action whatsapp" href="https://wa.me/31623596416" target="_blank" rel="noopener" aria-label="WhatsApp Henk Jansen">W</a>
-          </div>
-        </div>
-      </article>
-    
       <article class="order-row planned-order-call">
         <div class="order-content">
           <div class="line-one order-title-row">
-            <span class="order-index">7</span>
+            <span class="order-index">6</span>
             <strong>Van leeuwen</strong>
             <span>30-10-2026 | Klant op dag zelf bellen</span>
           </div>
@@ -270,7 +245,7 @@
       <article class="order-row planned-order">
         <div class="order-content">
           <div class="line-one order-title-row">
-            <span class="order-index">8</span>
+            <span class="order-index">7</span>
             <strong>P.Simmers</strong>
             <span>04-11-2026 | 11-13</span>
           </div>
@@ -288,6 +263,31 @@
             <a class="icon-action call" href="tel:0611566003" aria-label="Bel P.Simmers">&#9742;</a>
             <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Het%20Bijltje%2029%2C%20Epe" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
             <a class="icon-action whatsapp" href="https://wa.me/31611566003" target="_blank" rel="noopener" aria-label="WhatsApp P.Simmers">W</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="order-row planned-order">
+        <div class="order-content">
+          <div class="line-one order-title-row">
+            <span class="order-index">8</span>
+            <strong>Henk Jansen</strong>
+            <span>06-11-2026 | 11-13</span>
+          </div>
+          <div class="order-info">
+            <div class="line-two">
+              <span>Brouwersmolenweg 393 Ugchelen</span>
+              <span>Eik 1,6 m3 | Beuk 2,4 m3</span>
+            </div>
+            <div class="preference">Km 32,2 &middot; Bezorgen € 64 &middot; Tel 06-23596416</div>
+          </div>
+        </div>
+        <div class="quick-actions">
+          <div class="order-amount">4 M3 / € 644</div>
+          <div class="action-buttons">
+            <a class="icon-action call" href="tel:0623596416" aria-label="Bel Henk Jansen">&#9742;</a>
+            <a class="icon-action map" href="https://www.google.com/maps/search/?api=1&query=Brouwersmolenweg%20393%20Ugchelen" target="_blank" rel="noopener" aria-label="Route openen">&#8599;</a>
+            <a class="icon-action whatsapp" href="https://wa.me/31623596416" target="_blank" rel="noopener" aria-label="WhatsApp Henk Jansen">W</a>
           </div>
         </div>
       </article>
@@ -1027,13 +1027,8 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell filled">
-                      
-                        <div class="planning-item planning-item">
-                          <strong>Henk Jansen</strong>
-                          <span>15-17</span>
-                        </div>
-                      
+                    <div class="planning-cell ">
+                      <span class="free">vrij</span>
                     </div>
                   
                     <div class="planning-cell ">
@@ -1132,8 +1127,13 @@
                       <span class="free">vrij</span>
                     </div>
                   
-                    <div class="planning-cell ">
-                      <span class="free">vrij</span>
+                    <div class="planning-cell filled">
+                      
+                        <div class="planning-item planning-item">
+                          <strong>Henk Jansen</strong>
+                          <span>11-13</span>
+                        </div>
+                      
                     </div>
                   
                     <div class="planning-cell ">
